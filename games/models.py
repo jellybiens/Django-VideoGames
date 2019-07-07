@@ -5,7 +5,7 @@ class Console(models.Model):
     name = models.CharField(max_length=100)
     publisher = models.CharField(max_length=100)
     description = models.CharField(max_length=5000)
-    image = models.CharField(max_length=5000)
+    image = models.FileField()
 
     def get_absolute_url(self):
         return reverse('games:console_games', kwargs={'pk': self.pk})
@@ -20,7 +20,7 @@ class Game(models.Model):
     year = models.CharField(max_length=4)
     genre = models.CharField(max_length=35)
     description = models.CharField(max_length=5000)
-    image = models.CharField(max_length=5000)
+    image = models.FileField()
     completed = models.BooleanField(default=False)
 
     def get_absolute_url(self):
