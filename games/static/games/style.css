@@ -1,0 +1,29 @@
+body{
+    background: white url("images/background.png");
+}
+
+.game-thumb{
+    width:100%;
+    height:auto;
+    margin: auto;
+}
+
+.star-gold{
+
+}
+.star-black{
+     filter: brightness(0%);
+     transform: scale(0.3);
+}
+
+.navbar{
+    border-radius: 0px !important;
+}
+
+.navbar-brand{
+    font-family: '';
+}
+
+.publisher{
+    margin-top: 0 !important;
+}

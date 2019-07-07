@@ -1,0 +1,29 @@
+{% extends 'games/base.html' %}
+
+
+{% block body %}
+
+    {% if all_games %}
+
+
+    <div class="container">
+      <div class="row">
+
+          {% for game in all_games %}
+
+            {% include 'games/game_thumb.html' %}
+
+          {% endfor %}
+      </div>
+
+    </div>
+
+    {% else %}
+
+    <h3>No games to list...</h3>
+
+    {% endif %}
+
+
+
+{% endblock %}

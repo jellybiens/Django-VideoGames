@@ -1,0 +1,45 @@
+
+{% extends 'games/base.html' %}
+
+{% block body %}
+
+
+    {% if error_message %}
+    <p>{{ error_message }}</p>
+    {% endif %}
+
+    <div class="jumbotron">
+      <div class="container">
+          <div class="col-md-8">
+            <h1>{{ console.name }}</h1>
+            <h3>{{ console.publisher }}</h3>
+              <p>{{ console.description }}</p>
+          </div>
+          <div class="col-md-4">
+            <img class="game-thumb" src="{{ console.image }}" />
+          </div>
+      </div>
+    </div>
+
+    {% if console.game_set.count > 0 %}
+    <div class="container">
+      <div class="row">
+
+        {% for game in console.game_set.all %}
+
+            {% include 'games/game_thumb.html' %}
+
+        {% endfor %}
+      </div>
+
+    </div>
+
+    {% else %}
+
+    <h3>No games to list...</h3>
+
+    {% endif %}
+
+
+
+{% endblock %}
