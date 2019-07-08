@@ -7,6 +7,10 @@ urlpatterns = [
     # /games/
     url(r'^$', views.IndexView.as_view(), name='index'),
 
+    # /games/register/
+    url(r'register/$', views.UserFormView.as_view(), name='register'),
+
+
     # /games/all_games/
     url(r'all_games/$', views.AllGames.as_view(), name='all_games'),
 
